@@ -15,7 +15,7 @@ jobs:
   deploy_data_environment:
     # Only run when PR is merged or on direct push to environment branches
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.merged == true)
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     env:
       # Read connection secret
